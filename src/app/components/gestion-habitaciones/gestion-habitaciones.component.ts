@@ -21,7 +21,7 @@ export class GestionHabitacionesComponent implements OnInit {
     this.getHabitaciones();
   }
 
-  getHabitaciones(){
+  private getHabitaciones(){
     this.habitacionService.getListaHabitaciones().subscribe(data => {
       //Inside the callback function, the room object that is returned by the server is pushed to
       // the rooms array and the newRoom object is reset to its default values.

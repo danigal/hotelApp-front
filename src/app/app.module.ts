@@ -9,7 +9,8 @@ import { FormsModule } from '@angular/forms';
 import { UpdateClienteComponent } from './components/update-cliente/update-cliente.component';
 import { DetallesClienteComponent } from './components/detalles-cliente/detalles-cliente.component';
 import { GestionHabitacionesComponent } from './components/gestion-habitaciones/gestion-habitaciones.component';
-
+/* import { GestionReservasComponent } from './gestion-reservas/gestion-reservas.component';
+ */
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { GestionHabitacionesComponent } from './components/gestion-habitaciones/
     CrearClienteComponent,
     UpdateClienteComponent,
     DetallesClienteComponent,
-    GestionHabitacionesComponent,
+    GestionHabitacionesComponent
+/*     GestionReservasComponent, */
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,53 @@
+<!-- <h1 class="mb-4">Reservas</h1> -->
+
+<!-- <table class="table table-striped">
+    <tr>
+        <th>Cliente</th>
+        <th>Habitacion</th>
+        <th>Check-in</th>
+        <th>Check-out</th>
+        <th>Precio Total</th>
+        <th>Acciones</th>
+    </tr>
+    <tr *ngFor="let reserva of reservas">
+        <td>{{ reserva.cliente.nombre }} {{ reserva.cliente.apellido }}</td>
+        <td>{{ reserva.habitacion.numeroHabitacion }}</td>
+        <td>{{ reserva.checkInDate | date }}</td>
+        <td>{{ reserva.checkOutDate | date }}</td>
+        <td>{{ reserva.precioTotal | currency }}</td>
+        <td>
+            <button class="btn btn-danger" (click)="eliminarReserva(reserva.idReserva)">Eliminar</button>
+        </td>
+    </tr>
+</table> -->
+<!-- 
+<h2 class="mb-4">Añadir reserva</h2>
+
+<form (ngSubmit)="addReserva()" class="form-inline">
+    <div class="form-group mr-3">
+        <label for="clienteId" class="mr-2">Cliente:</label>
+        <select id="idCliente" class="form-control" [(ngModel)]="idClienteSeleccionada" name="idCliente">
+            <option *ngFor="let cliente of clientes" [value]="cliente.idCliente">
+                {{ cliente.nombre }} {{ cliente.apellido }}
+            </option>
+        </select>
+    </div>
+    <div class="form-group mr-3">
+        <label for="idHabitacion" class="mr-2">Habitacion:</label>
+        <select id="idHabitacion" class="form-control" [(ngModel)]="idHabitacionSeleccionada" name="idHabitacion">
+            <option *ngFor="let habitacion of habitaciones" [value]="habitacion.idHabitacion">
+                {{ habitacion.numeroHabitacion }}
+            </option>
+        </select>
+
+    </div>
+    <div class="form-group mr-3">
+        <label for="checkInDate" class="mr-2">Check-in:</label>
+        <input id="checkInDate" class="form-control" type="date" [(ngModel)]="checkInDate" name="checkInDate">
+    </div>
+    <div class="form-group mr-3">
+        <label for="checkOutDate" class="mr-2">Check-out:</label>
+        <input id="checkOutDate" class="form-control" type="date" [(ngModel)]="checkOutDate" name="checkOutDate">
+    </div>
+    <button type="submit" class="btn btn-primary">Añadir reserva</button>
+</form> -->

@@ -1,11 +1,11 @@
 <table class="table">
     <thead>
       <tr>
-        <th>Room Number</th>
-        <th>Room Type</th>
-        <th>Price per Night</th>
-        <th>Status</th>
-        <th>Actions</th>
+        <th>Número de habitacion</th>
+        <th>Tipo de habitacion</th>
+        <th>Precio Por Noche</th>
+        <th>Disponibilidad</th>
+        <th>Acciones</th>
       </tr>
     </thead>
     <tbody>
@@ -16,8 +16,8 @@
         <td>{{ habitacion.disponibilidad }}</td>
         <td>
             <div class="btn-group" role="group">
-                <button (click)="editarHabitacion(habitacion)" class="btn btn-primary">Edit</button>
-                <button (click)="eliminarHabitacion(habitacion.idHabitacion)" class="btn btn-danger">Delete</button>
+                <button (click)="editarHabitacion(habitacion)" class="btn btn-primary">Editar</button>
+                <button (click)="eliminarHabitacion(habitacion.idHabitacion)" class="btn btn-danger">Borrar</button>
             </div>
         </td>
       </tr>
@@ -28,34 +28,34 @@
 
   <form (submit)="addHabitacion()" class="form">
     <div class="form-group">
-      <label>Room Number</label>
+      <label>Número de habitacion</label>
       <input type="text" [(ngModel)]="nuevaHabitacion.numeroHabitacion" name="numeroHabitacion" class="form-control">
     </div>
     <div class="form-group">
-      <label>Room Type</label>
+      <label>Tipo de habitacion</label>
       <input type="text" [(ngModel)]="nuevaHabitacion.tipoHabitacion" name="tipoHabitacion" class="form-control">
     </div>
     <div class="form-group">
-      <label>Price per Night</label>
+      <label>Precio por noche</label>
       <input type="number" [(ngModel)]="nuevaHabitacion.precioPorNoche" name="precioPorNoche" class="form-control">
     </div>
     <div class="form-group">
-      <label>Status</label>
+      <label>Disponibilidad</label>
       <input type="text" [(ngModel)]="nuevaHabitacion.disponibilidad" name="disponibilidad" class="form-control">
     </div>
-    <button type="submit" class="btn btn-primary">Add Room</button>
+    <button type="submit" class="btn btn-primary">Añadir habitacion</button>
   </form>
   
   <hr>
   
 <form (submit)="actualizarPrecioPorNoche()" class="form">
 <div class="form-group">
-    <label>Room Type:</label>
+    <label>Tipo de habitacion:</label>
     <input type="text" [(ngModel)]="tipoHabitacion" name="tipoHabitacion" class="form-control">   
 </div>
 <div class="form-group">
-    <label>New Price per Night:</label>
+    <label>Precio por noche:</label>
     <input type="number" [(ngModel)]="nuevoPrecioPorNoche" name="nuevoPrecioPorNoche" class="form-control">
 </div>
-    <button type="submit" class="btn btn-primary">Update Price per Night</button>
+    <button type="submit" class="btn btn-primary">Actualizar Precio Por Noche</button>
 </form>
