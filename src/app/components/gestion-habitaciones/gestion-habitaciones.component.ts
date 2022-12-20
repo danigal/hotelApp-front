@@ -8,28 +8,37 @@ import { HabitacionService } from 'src/app/services/habitacion.service';
   templateUrl: './gestion-habitaciones.component.html',
   styleUrls: ['./gestion-habitaciones.component.css']
 })
+
 export class GestionHabitacionesComponent implements OnInit {
-  
+    // Declaración de la variable "habitaciones" de tipo "Habitacion[]" y la variable
+  // "nuevaHabitacion" de tipo "Habitacion" con su valor inicializado como una nueva instancia de "Habitacion"
   habitaciones: Habitacion[]
   nuevaHabitacion: Habitacion = new Habitacion();
+    // Declaración de la variable "tipoHabitacion" de tipo "string" y la variable
+  // "nuevoPrecioPorNoche" de tipo "number"
+
   tipoHabitacion: string;
   nuevoPrecioPorNoche: number;
-
+// Inyección de dependencia del servicio "HabitacionService" en el constructor
   constructor(private habitacionService: HabitacionService, router: Router){}
 
   ngOnInit(): void {
+    // Llamada al método "getHabitaciones" al inicializar el componente
     this.getHabitaciones();
   }
-
+// Método para obtener la lista de habitaciones
   private getHabitaciones(){
+    // Llamada al método "getListaHabitaciones" del servicio "HabitacionService" y suscripción al observable
     this.habitacionService.getListaHabitaciones().subscribe(data => {
-      //Inside the callback function, the room object that is returned by the server is pushed to
-      // the rooms array and the newRoom object is reset to its default values.
       this.habitaciones = data;
     })
   }
-
+// Método para agregar una habitación
   addHabitacion(){
+    // Llamada al método "addHabitacion" del servicio "HabitacionService" y suscripción al observable
+    // que devuelve el servicio. Dentro de la función de callback "next", se muestra un mensaje en la consola
+    // y se vuelve a llamar al método "getHabitaciones" para actualizar la lista de habitaciones. En la función
+    // de callback "error", se muestra el error en la consola
     this.habitacionService.addHabitacion(this.nuevaHabitacion).subscribe({
       next: () => {
         console.log("Habitación agregada exitosamente");
@@ -39,7 +48,9 @@ export class GestionHabitacionesComponent implements OnInit {
     });
   }
 
+  // Método para editar una habitación
   editarHabitacion(habitacion: Habitacion) {
+    // Llamada al método "editarHabitacion" del servicio "HabitacionService" y suscripción al observable
     this.habitacionService.editarHabitacion(habitacion).subscribe({
       next: () => {
         console.log("Habitación agregada exitosamente");
