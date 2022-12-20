@@ -13,6 +13,11 @@
             <td>{{cliente.nombre}}</td>
             <td>{{cliente.apellido}}</td>
             <td>{{cliente.email}}</td>
+            <td><!-- click - Sintaxis de Angular para evento click-->
+                <button (click) = "updateCliente(cliente.idCliente)" class="btn btn-info">Actualizar</button>
+                <button (click) = 'eliminarCliente(cliente.idCliente)' class="btn btn-danger" style="margin-left: 10px;"> Eliminar</button>
+                <button (click) = 'detallesCliente(cliente.idCliente)' class="btn btn-info" style="margin-left: 10px;"> Vista</button>
+            </td>
         </tr>
     </tbody>
 </table>
