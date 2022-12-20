@@ -5,7 +5,7 @@ import { DetallesClienteComponent } from './components/detalles-cliente/detalles
 import { GestionHabitacionesComponent } from './components/gestion-habitaciones/gestion-habitaciones.component';
 import { ListaClientesComponent } from './components/lista-clientes/lista-clientes.component';
 import { UpdateClienteComponent } from './components/update-cliente/update-cliente.component';
-//import { GestionReservasComponent } from './gestion-reservas/gestion-reservas.component';
+import { GestionReservasComponent } from './gestion-reservas/gestion-reservas.component';
 
 const routes: Routes = [
   {path: `clientes`, component: ListaClientesComponent},
@@ -13,8 +13,8 @@ const routes: Routes = [
   {path: ``, redirectTo: `clientes`, pathMatch: 'full'},
   {path: `update-cliente/:id`, component: UpdateClienteComponent},
   {path: 'detalles-cliente/:id', component: DetallesClienteComponent},
-  {path: `gestion-habitaciones`, component: GestionHabitacionesComponent}
-  //{path: `gestion-reservas`, component: GestionReservasComponent}
+  {path: `gestion-habitaciones`, component: GestionHabitacionesComponent},
+  {path: `gestion-reservas`, component: GestionReservasComponent}
 ];
 
 @NgModule({

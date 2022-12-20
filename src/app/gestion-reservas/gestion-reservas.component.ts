@@ -1,4 +1,4 @@
-/* import { HttpClient } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Cliente } from '../models/cliente';
@@ -27,8 +27,7 @@ export class GestionReservasComponent implements OnInit {
    
 
   ngOnInit(): void {
-  } */
-  /*
+   
     // Obtener la lista de reservas de la API
     this.http.get<Reserva[]>(`${this.baseURL}`).subscribe(reservas => {
       this.reservas = reservas;
@@ -42,8 +41,8 @@ export class GestionReservasComponent implements OnInit {
     this.http.get<Habitacion[]>(this.habitacionesURL).subscribe(habitaciones => {
       this.habitaciones = habitaciones;
     });
-  } */
-/* 
+  } 
+
   // Eliminar una reserva con el id dado
   eliminarReserva(id: number): void {
     this.http.delete(`${this.baseURL}/${id}`).subscribe(() => {
@@ -90,4 +89,4 @@ export class GestionReservasComponent implements OnInit {
     return diffInDays * habitacion.precioPorNoche;
   }
 }
- */
+
